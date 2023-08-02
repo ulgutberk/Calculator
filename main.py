@@ -26,10 +26,10 @@ def correctSelect(operationSelection):
     global correctSelectControl
     selectionList = ("Addition", "Subtraction", "Multiplication", "Division")
     if operationSelection == 1:
-        print(f"Your selection is {selectionList[1]}")
+        print(f"Your selection is {selectionList[0]}")
         choice = str(input("Do you confirm your choice ? (Yes or Not):  "))
         if choice == "Yes" or choice == "YES" or choice == "yes":
-            print(f"{selectionList[operationSelection]} selected")
+            print("Addition selected")
             correctSelectControl = True
         else:
             print("!You did not confirm the selection, choose from the beginning!")
@@ -37,30 +37,30 @@ def correctSelect(operationSelection):
         return correctSelectControl
 
     elif operationSelection == 2:
-        print(f"Your selection is {selectionList[2]}")
+        print(f"Your selection is {selectionList[1]}")
         choice = str(input("Do you confirm your choice ? (Yes or Not):  "))
         if choice == "Yes" or choice == "YES" or choice == "yes":
-            print(f"{selectionList[operationSelection]} selected")
+            print("Subtraction selected")
             correctSelectControl = True
         else:
             print("!You did not confirm the selection, choose from the beginning!")
             calculatorSelect()
         return correctSelectControl
     elif operationSelection == 3:
-        print(f"Your selection is {selectionList[3]}")
+        print(f"Your selection is {selectionList[2]}")
         choice = str(input("Do you confirm your choice ? (Yes or Not):  "))
         if choice == "Yes" or choice == "YES" or choice == "yes":
-            print(f"{selectionList[operationSelection]} selected")
+            print("Multiplication selected")
             correctSelectControl = True
         else:
             print("!You did not confirm the selection, choose from the beginning!")
             calculatorSelect()
         return correctSelectControl
     elif operationSelection == 4:
-        print(f"Your selection is {selectionList[4]}")
+        print(f"Your selection is {selectionList[3]}")
         choice = str(input("Do you confirm your choice ? (Yes or Not):  "))
         if choice == "Yes" or choice == "YES" or choice == "yes":
-            print(f"{selectionList[operationSelection]} selected")
+            print("Division selected")
             correctSelectControl = True
         else:
             print("!You did not confirm the selection, choose from the beginning!")
@@ -101,7 +101,7 @@ while newCalculation:
     while not correctSelectControl:
         correctSelect(operation)
     getNumber()
-    keepCalculation = input("Do you want to make a new Calculation ?: ")
+    keepCalculation = input("Do you want to make a new Calculation ? (Yes or No): ")
     if keepCalculation == "Yes" or keepCalculation == "YES" or keepCalculation == "yes":
         continue
     else:
